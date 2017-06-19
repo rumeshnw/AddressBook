@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddressBook.iml" filepath="$PROJECT_DIR$/.idea/modules/AddressBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddressBook_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/AddressBook_integrationTest.iml" group="AddressBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddressBook_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AddressBook_main.iml" group="AddressBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddressBook_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AddressBook_test.iml" group="AddressBook" />
+    </modules>
+  </component>
+</project>

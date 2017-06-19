@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="au.com.addressBook.service.ContactServiceIntegrationSpec" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-06-19T00:26:30" hostname="MAC-SF360-RUMESH" time="0.199">
+  <properties/>
+  <testcase name="Should boot application without any errors" classname="au.com.addressBook.service.ContactServiceIntegrationSpec" time="0.002"/>
+  <testcase name="test addNewContact, should return persisted Contact instance" classname="au.com.addressBook.service.ContactServiceIntegrationSpec" time="0.042"/>
+  <testcase name="test removeContact, should remove contact of given contact ID" classname="au.com.addressBook.service.ContactServiceIntegrationSpec" time="0.066"/>
+  <testcase name="test getAllContacts, should return all contacts belong to given AddressBook ID" classname="au.com.addressBook.service.ContactServiceIntegrationSpec" time="0.045"/>
+  <testcase name="test getAllContacts, should return unique set of contacts across all address books" classname="au.com.addressBook.service.ContactServiceIntegrationSpec" time="0.043"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
