@@ -34,7 +34,8 @@ public class Contact {
     @JoinColumn(name = "addressBook_id", nullable = false)
     private AddressBook addressBook;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "contact")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "contact", cascade = CascadeType.ALL)
+    @NotNull(message = "At least one contact number is required")
     private Set<ContactEntry> contactEntries;
 
     public Long getId() {
@@ -106,11 +107,11 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact ::: " +
-                " firstName= " + firstName + "\n" +
-                " lastName= " + lastName + "\n" +
-                " addressBook=" + addressBook.getName() + "\n" +
-                " contactEntries=" + contactEntries;
+        return "Contact :::\n" +
+                " firstName:        " + firstName + "\n" +
+                " lastName:         " + lastName + "\n" +
+                " addressBook:      " + addressBook.getName() + "\n" +
+                " contactEntries:   " + contactEntries;
     }
 
     @Override
@@ -156,7 +157,7 @@ public class Contact {
             Contact contact = new Contact();
             contact.firstName       = this.firstName;
             contact.lastName        = this.lastName;
-            contact.contactEntries  = this.contactEntries;
+            this.contactEntries.forEach(contactEntry -> contact.addToContactEntries(contactEntry));
             contact.addressBook     = this.addressBook;
             return contact;
         }

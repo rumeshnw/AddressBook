@@ -151,7 +151,7 @@ public class ConsoleImpl implements Console {
                 }
             } while (invalidInput);
 
-            Contact contact = contacts.get(option);
+            Contact contact = contacts.get(option - 1);
             contactService.removeContact(contact.getId());
             System.out.println("Contact removed from " + selectedAddressBook.getName() + " Address Book");
         }
@@ -167,6 +167,7 @@ public class ConsoleImpl implements Console {
     private void showUniqueContacts(){
         Set<Contact> uniqueContacts = contactService.getAllContacts();
         if(uniqueContacts != null && !uniqueContacts.isEmpty()){
+            System.out.println("All Contacts in the System\n");
             uniqueContacts.stream().forEach(System.out::println);
         } else {
             System.out.println("No contacts exists in the system");
@@ -180,16 +181,15 @@ public class ConsoleImpl implements Console {
 
     private boolean showAllContactsOfAddressBook(AddressBook addressBook, List<Contact> contacts){
         if(contacts != null && !contacts.isEmpty()){
-            System.out.println("Address Book ::::: " + addressBook.getName());
-            contacts.stream().forEach(System.out::println);
+            System.out.println("All Contacts of Address Book - " + addressBook.getName());
+            AtomicInteger atomicInteger = new AtomicInteger();
+            contacts.stream().forEach(contact -> System.out.println(atomicInteger.incrementAndGet() + ". " + contact.toString()));
             return true;
         } else {
             System.out.println("No contacts exists for Address Book - " + addressBook.getName());
             return false;
         }
     }
-
-
 
     private AddressBook selectAddressBook(Scanner scanner){
         List<AddressBook> addressBooks = addressBookService.getAllAddressBooks();

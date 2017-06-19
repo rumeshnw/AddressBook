@@ -24,7 +24,7 @@ public class AddressBook {
     @Column()
     private String description;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "addressBook")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "addressBook", cascade = CascadeType.ALL)
     Set<Contact> contacts;
 
     public AddressBook() {

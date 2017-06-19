@@ -100,6 +100,6 @@ public class ContactEntry {
 
     @Override
     public String toString() {
-        return contactType.getName() + " - " + contactEntryValue + "\n";
+        return contactType.getName() + " - " + contactEntryValue;
     }
 }
