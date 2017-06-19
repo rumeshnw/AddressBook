@@ -1,0 +1,14 @@
+
+build/jacoco/*
+build/reports/*
+build/reports/tests/*
+build/reports/tests/**/*.html
+build/reports/coverage/*
+build/reports/jacoco/*
+build/test-results/*
+build/test-results/*.xml
+build/test-results/**/*.xml
+build/*
+C:\log4j-application.log
+*.bin
+*.lock
