@@ -26,7 +26,7 @@ class AddressBookServiceIntegrationSpec extends BaseIntegrationSpec {
         AddressBook addressBook = addressBookService.createAddressBook("Finance", "All finance contacts")
 
         then:
-        addressBookRespository.findOne(addressBook.addressBookId)
+        addressBookRespository.findOne(addressBook.id)
     }
 
     def "test getAddressBook, should return persisted AddressBook instance when AddressBook available for given ID"(){
@@ -34,10 +34,10 @@ class AddressBookServiceIntegrationSpec extends BaseIntegrationSpec {
         AddressBook addressBook = addressBookRespository.save(new AddressBook("IT", "My IT Guys"))
 
         when:
-        AddressBook response = addressBookService.getAddressBook(addressBook.addressBookId)
+        AddressBook response = addressBookService.getAddressBook(addressBook.id)
 
         then:
-        response.addressBookId  == addressBook.addressBookId
+        response.id  == addressBook.id
         response.name           == addressBook.name
     }
 

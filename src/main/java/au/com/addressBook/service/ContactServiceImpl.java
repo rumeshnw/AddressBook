@@ -2,7 +2,6 @@ package au.com.addressBook.service;
 
 import au.com.addressBook.domain.AddressBook;
 import au.com.addressBook.domain.Contact;
-import au.com.addressBook.domain.ContactEntry;
 import au.com.addressBook.dto.ContactDTO;
 import au.com.addressBook.repository.AddressBookRespository;
 import au.com.addressBook.repository.ContactRepository;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Implementation of {@link ContactService}
@@ -29,20 +27,16 @@ public class ContactServiceImpl implements ContactService {
     public Contact addNewContact(ContactDTO contactDTO) {
 
         Assert.notNull(contactDTO, "Contact information is required");
+        contactDTO.validate();
+
         AddressBook addressBook = addressBookRespository.findOne(contactDTO.getAddressBookId());
         Assert.notNull(addressBook, "Address book not exists");
 
-        Contact contact = new Contact();
-        contact.setAddressBook(addressBook);
-        contact.setFirstName(contactDTO.getContactFirstName());
-        contact.setLastName(contactDTO.getContactLastName());
-
-        if(contactDTO.getContactEntries() != null) {
-            contact.setContactEntries(contactDTO.getContactEntries().entrySet().stream()
-                    .map(entry -> new ContactEntry(entry.getKey(), entry.getValue()))
-                    .collect(Collectors.toSet()));
-        }
-
+        Contact contact = new Contact.ContactBuilder().setAddressBook(addressBook)
+                                                      .setFirstName(contactDTO.getContactFirstName())
+                                                      .setLastName(contactDTO.getContactLastName())
+                                                      .setContactEntries(contactDTO.getContactEntries()).build();
+        System.out.println("CONTACT :::: " + contact.toString());
         return contactRepository.save(contact);
     }
 
@@ -54,7 +48,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Set<Contact> getAllContacts(Long addressBookId) {
+    public List<Contact> getAllContacts(Long addressBookId) {
 
         AddressBook addressBook = addressBookRespository.findOne(addressBookId);
         Assert.notNull(addressBook, "Address Book not exists");

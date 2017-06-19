@@ -6,9 +6,13 @@ package au.com.addressBook.enums;
 public enum ContactType {
     MOBILE("Mobile"), WORK("Work"), HOME("Home");
 
-    String name;
+    private String name;
 
     ContactType(String name){
         this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
     }
 }

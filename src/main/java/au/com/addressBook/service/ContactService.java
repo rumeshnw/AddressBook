@@ -3,6 +3,7 @@ package au.com.addressBook.service;
 import au.com.addressBook.domain.Contact;
 import au.com.addressBook.dto.ContactDTO;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -33,7 +34,7 @@ public interface ContactService {
      * @param addressBookId key of {@link au.com.addressBook.domain.AddressBook}
      * @return Set of {@link Contact} objects
      */
-    Set<Contact> getAllContacts(Long addressBookId);
+    List<Contact> getAllContacts(Long addressBookId);
 
     /**
      * Get unique set of all {@link Contact} objects across all {@link au.com.addressBook.domain.AddressBook} instances

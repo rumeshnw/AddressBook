@@ -39,7 +39,8 @@ class ContactServiceImplSpec extends Specification {
         }
 
         and:
-        ContactDTO contactDTO = ContactDTO.buildContact(1, "John", "Doe", null)
+        ContactDTO contactDTO = new ContactDTO.ContactDTOBuilder().setAddressBookId(1).setContactFirstName("John").setContactLastName("Doe")
+                                            .setContactEntries([(ContactType.MOBILE): "0424788766", (ContactType.WORK): "1300123243"]).build()
 
         when:
         contactService.addNewContact(contactDTO)
@@ -64,7 +65,8 @@ class ContactServiceImplSpec extends Specification {
         }
 
         and:
-        ContactDTO contactDTO = ContactDTO.buildContact(1, "John", "Doe", null)
+        ContactDTO contactDTO = new ContactDTO.ContactDTOBuilder().setAddressBookId(1).setContactFirstName("John").setContactLastName("Doe")
+                                            .setContactEntries([(ContactType.MOBILE): "0424788766", (ContactType.WORK): "1300123243"]).build()
 
         when:
         contactService.addNewContact(contactDTO)
@@ -89,7 +91,8 @@ class ContactServiceImplSpec extends Specification {
         }
 
         and:
-        ContactDTO contactDTO = ContactDTO.buildContact(1, "John", "Doe", [(ContactType.MOBILE): "0424788766", (ContactType.WORK): "1300123243"])
+        ContactDTO contactDTO = new ContactDTO.ContactDTOBuilder().setAddressBookId(1).setContactFirstName("John").setContactLastName("Doe")
+                                        .setContactEntries([(ContactType.MOBILE): "0424788766", (ContactType.WORK): "1300123243"]).build()
 
         when:
         Contact contact = contactService.addNewContact(contactDTO)
@@ -153,11 +156,24 @@ class ContactServiceImplSpec extends Specification {
         }
 
         contactService.contactRepository = Mock(ContactRepository){
-            1 * getAllByAddressBook(_ as AddressBook) >> { AddressBook addressBook -> [new Contact(firstName: "John", lastName: "Doe"), new Contact(firstName: "Jane", lastName: "Doe")] as Set  }
+            1 * getAllByAddressBook(_ as AddressBook) >> { AddressBook addressBook -> [new Contact(firstName: "John", lastName: "Doe"), new Contact(firstName: "Jane", lastName: "Doe")] }
         }
 
         when:
         Set<Contact> contacts = contactService.getAllContacts(1)
+
+        then:
+        contacts.size() == 2
+    }
+
+    def "test getAllContacts, should return unique set of contacts across all address books"(){
+        given:
+        contactService.contactRepository = Mock(ContactRepository){
+            1 * findAll() >> [new Contact(firstName: "John", lastName: "Doe"), new Contact(firstName: "Jane", lastName: "Doe")]
+        }
+
+        when:
+        Set<Contact> contacts = contactService.getAllContacts()
 
         then:
         contacts.size() == 2

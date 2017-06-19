@@ -15,7 +15,7 @@ public class AddressBook {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long addressBookId;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     @NotNull(message = "Address book name is required")
@@ -24,7 +24,7 @@ public class AddressBook {
     @Column()
     private String description;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "addressBook")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "addressBook")
     Set<Contact> contacts;
 
     public AddressBook() {
@@ -35,12 +35,12 @@ public class AddressBook {
         this.description = description;
     }
 
-    public Long getAddressBookId() {
-        return addressBookId;
+    public Long getId() {
+        return id;
     }
 
-    public void setAddressBookId(Long addressBookId) {
-        this.addressBookId = addressBookId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -82,7 +82,7 @@ public class AddressBook {
 
     @Override
     public String toString() {
-        return "AddressBook{" + "id=" + addressBookId + ", name='" + name + "', description='" +
+        return "AddressBook{" + "id=" + id + ", name='" + name + "', description='" +
                 description + "'}";
     }
 }

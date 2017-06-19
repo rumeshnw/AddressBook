@@ -4,7 +4,7 @@ import au.com.addressBook.domain.AddressBook;
 import au.com.addressBook.domain.Contact;
 import org.springframework.data.repository.CrudRepository;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * Data repository to handle CRUD operations for {@link Contact}
@@ -13,5 +13,5 @@ import java.util.Set;
  */
 public interface ContactRepository extends CrudRepository<Contact, Long> {
 
-    Set<Contact> getAllByAddressBook(AddressBook addressBook);
+    List<Contact> getAllByAddressBook(AddressBook addressBook);
 }

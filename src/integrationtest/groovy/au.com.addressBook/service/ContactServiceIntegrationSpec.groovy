@@ -31,13 +31,14 @@ class ContactServiceIntegrationSpec extends BaseIntegrationSpec {
     def "test addNewContact, should return persisted Contact instance"(){
         given:
         AddressBook addressBook = addressBookRespository.save(new AddressBook(name: "DevOps", description: "All DevOps contacts"))
-        ContactDTO contactDTO   = ContactDTO.buildContact(addressBook.addressBookId, "John", "Doe", [(ContactType.MOBILE): "0457798446"])
+        ContactDTO contactDTO   = new ContactDTO.ContactDTOBuilder().setAddressBookId(addressBook.id).setContactFirstName("John")
+                                            .setContactLastName("Doe").setContactEntries([(ContactType.MOBILE): "0457798446"]).build()
 
         when:
         Contact contact = contactService.addNewContact(contactDTO)
 
         then:
-        contact.addressBook.addressBookId   == addressBook.addressBookId
+        contact.addressBook.id   == addressBook.id
         contact.firstName                   == contactDTO.contactFirstName
         contact.lastName                    == contactDTO.contactLastName
         contact.contactEntries.size()       == contactDTO.contactEntries.size()
@@ -49,13 +50,13 @@ class ContactServiceIntegrationSpec extends BaseIntegrationSpec {
         Contact contact  = addressBooks[0].contacts.iterator().next()
 
         expect:
-        contactRepository.findOne(contact.contactId)
+        contactRepository.findOne(contact.id)
 
         when:
-        contactService.removeContact(contact.contactId)
+        contactService.removeContact(contact.id)
 
         then:
-        !contactRepository.findOne(contact.contactId)
+        !contactRepository.findOne(contact.id)
     }
 
     def "test getAllContacts, should return all contacts belong to given AddressBook ID"(){
@@ -63,7 +64,7 @@ class ContactServiceIntegrationSpec extends BaseIntegrationSpec {
         def addressBooks = initAddressBooks()
 
         when:
-        Set<Contact> contacts = contactService.getAllContacts(addressBooks[1].addressBookId)
+        List<Contact> contacts = contactService.getAllContacts(addressBooks[1].id)
 
         then:
         contacts.size() == 3

@@ -16,7 +16,7 @@ public class ContactEntry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long contactEntryId;
+    private Long id;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
@@ -27,8 +27,8 @@ public class ContactEntry {
     @NotNull(message = "Contact number is required")
     private String contactEntryValue;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "contactId", nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "contact_id", nullable = false)
     private Contact contact;
 
     public ContactEntry() {
@@ -39,12 +39,12 @@ public class ContactEntry {
         this.contactEntryValue = contactEntryValue;
     }
 
-    public Long getContactEntryId() {
-        return contactEntryId;
+    public Long getId() {
+        return id;
     }
 
-    public void setContactEntryId(Long contactEntryId) {
-        this.contactEntryId = contactEntryId;
+    public void setId(Long id) {
+        this.id = id;
     }
     public ContactType getContactType() {
         return contactType;
@@ -96,5 +96,10 @@ public class ContactEntry {
                 .append(contactType)
                 .append(contactEntryValue)
                 .toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return contactType.getName() + " - " + contactEntryValue + "\n";
     }
 }
