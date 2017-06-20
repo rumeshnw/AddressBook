@@ -12,13 +12,6 @@ build/*
 C:\log4j-application.log
 *.bin
 *.lock
-*.bin
-*.bin
-*.lock
 *.log
 .idea/workspace.xml
-*.bin
-*.bin
-*.lock
-*.xml
-*.log
+
