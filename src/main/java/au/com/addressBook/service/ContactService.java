@@ -41,5 +41,5 @@ public interface ContactService {
      *
      * @return unique set of {@link Contact} objects
      */
-    Set<Contact> getAllContacts();
+    Set<Contact> getAllUniqueContacts();
 }

@@ -157,8 +157,9 @@ public class Contact {
             Contact contact = new Contact();
             contact.firstName       = this.firstName;
             contact.lastName        = this.lastName;
-            this.contactEntries.forEach(contactEntry -> contact.addToContactEntries(contactEntry));
             contact.addressBook     = this.addressBook;
+            this.contactEntries.forEach(contactEntry -> contact.addToContactEntries(contactEntry));
+
             return contact;
         }
     }

@@ -166,14 +166,14 @@ class ContactServiceImplSpec extends Specification {
         contacts.size() == 2
     }
 
-    def "test getAllContacts, should return unique set of contacts across all address books"(){
+    def "test getAllUniqueContacts, should return unique set of contacts across all address books"(){
         given:
         contactService.contactRepository = Mock(ContactRepository){
             1 * findAll() >> [new Contact(firstName: "John", lastName: "Doe"), new Contact(firstName: "Jane", lastName: "Doe")]
         }
 
         when:
-        Set<Contact> contacts = contactService.getAllContacts()
+        Set<Contact> contacts = contactService.getAllUniqueContacts()
 
         then:
         contacts.size() == 2

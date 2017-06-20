@@ -57,7 +57,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Set<Contact> getAllContacts() {
+    public Set<Contact> getAllUniqueContacts() {
 
         Set<Contact> allContacts = new HashSet<>();
         contactRepository.findAll().forEach(allContacts::add);

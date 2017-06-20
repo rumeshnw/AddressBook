@@ -1,5 +1,7 @@
 package au.com.addressBook.ui;
 
+import org.springframework.util.StringUtils;
+
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -12,12 +14,17 @@ public interface Console {
 
     void startConsole();
 
-    static void withScanner(Consumer<Scanner> consumer){
+    default void withScanner(Consumer<Scanner> consumer){
         Scanner scanner = new Scanner(System.in);
         try {
             consumer.accept(scanner);
         } finally {
             scanner.close();
         }
+    }
+
+    default String trimUserInput(Scanner scanner){
+        String strValue = StringUtils.trimWhitespace(scanner.nextLine());
+        return StringUtils.isEmpty(strValue) ? null : strValue;
     }
 }

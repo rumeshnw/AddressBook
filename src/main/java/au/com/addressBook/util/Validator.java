@@ -1,14 +1,14 @@
 package au.com.addressBook.util;
 
-import au.com.addressBook.domain.AddressBook;
-
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Created by rnadeera on 18/6/17.
+ * Class holds all validation related utility methods
+ *
+ * @author rnadeera
  */
 public class Validator {
 

@@ -14,8 +14,8 @@ public interface AddressBookService {
     /**
      * Add new {@link AddressBook} to the system
      *
-     * @param name
-     * @param description
+     * @param name name of the address book
+     * @param description optional value
      * @return
      */
     AddressBook createAddressBook(String name, String description);

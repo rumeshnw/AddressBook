@@ -7,8 +7,8 @@ import au.com.addressBook.enums.ContactType;
 import au.com.addressBook.service.AddressBookService;
 import au.com.addressBook.service.ContactService;
 import au.com.addressBook.ui.handler.ExceptionHandler;
+import au.com.addressBook.ui.util.ConsoleUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.*;
@@ -32,7 +32,7 @@ public class ConsoleImpl implements Console {
     @Override
     public void startConsole() {
         showBanner();
-        Console.withScanner(scanner -> {
+        withScanner(scanner -> {
             String option;
             do {
                 showMainMenu();
@@ -63,7 +63,6 @@ public class ConsoleImpl implements Console {
                             break;
                         default:
                             System.out.println("Invalid option. Please enter a valid option and try again.");
-                            showMainMenu();
                             break;
                     }
                 } catch (Exception e){
@@ -91,10 +90,10 @@ public class ConsoleImpl implements Console {
 
     private AddressBook createAddressBook(Scanner scanner){
         System.out.println("Please enter an Address Book name");
-        String name = scanner.nextLine();
+        String name = trimUserInput(scanner);
 
         System.out.println("Please enter an Address Book description (this is optional. Hit enter to skip)");
-        String description = scanner.nextLine();
+        String description = trimUserInput(scanner);
 
         return addressBookService.createAddressBook(name, description);
     }
@@ -105,12 +104,10 @@ public class ConsoleImpl implements Console {
         if(selectedAddressBook != null) {
 
             System.out.println("Enter contact first name");
-            String firstName = StringUtils.trimWhitespace(scanner.nextLine());
-            firstName = StringUtils.isEmpty(firstName) ? null : firstName;
+            String firstName = trimUserInput(scanner);
 
             System.out.println("Enter contact last name");
-            String lastName = scanner.nextLine();
-            lastName = StringUtils.isEmpty(lastName) ? null : lastName;
+            String lastName = trimUserInput(scanner);
 
             Map<ContactType, String> contactEntries = new HashMap();
             Arrays.stream(ContactType.values()).forEach(contactType -> {
@@ -138,21 +135,13 @@ public class ConsoleImpl implements Console {
 
         List<Contact> contacts = contactService.getAllContacts(selectedAddressBook.getId());
 
-        if(showAllContactsOfAddressBook(selectedAddressBook, contacts)){
+        if(isContactsExist(contacts)){
+            showAllContactsOfAddressBook(selectedAddressBook, contacts);
             System.out.println("Please select a contact from above list");
-            boolean invalidInput = true;
-            int option;
-            do{
-                option = Integer.parseInt(scanner.nextLine());
 
-                if(option > contacts.size()){
-                    System.out.println("Invalid contact select. Please try again.");
-                } else {
-                    invalidInput = false;
-                }
-            } while (invalidInput);
-
+            int option = ConsoleUtil.getValidOptionForCollection(scanner, contacts, "Invalid contact select. Please try again.");
             Contact contact = contacts.get(option - 1);
+
             contactService.removeContact(contact.getId());
             System.out.println("Contact removed from " + selectedAddressBook.getName() + " Address Book");
         }
@@ -166,48 +155,33 @@ public class ConsoleImpl implements Console {
     }
 
     private void showUniqueContacts(){
-        Set<Contact> uniqueContacts = contactService.getAllContacts();
-        if(uniqueContacts != null && !uniqueContacts.isEmpty()){
+        Set<Contact> uniqueContacts = contactService.getAllUniqueContacts();
+        if(isContactsExist(uniqueContacts)){
             System.out.println("All Contacts in the System\n");
             uniqueContacts.stream().forEach(System.out::println);
-        } else {
-            System.out.println("No contacts exists in the system");
         }
     }
 
     private void showAllContactsOfAddressBook(AddressBook addressBook){
         List<Contact> contacts = contactService.getAllContacts(addressBook.getId());
-        showAllContactsOfAddressBook(addressBook, contacts);
-    }
-
-    private boolean showAllContactsOfAddressBook(AddressBook addressBook, List<Contact> contacts){
-        if(contacts != null && !contacts.isEmpty()){
-            System.out.println("All Contacts of Address Book - " + addressBook.getName());
-            AtomicInteger atomicInteger = new AtomicInteger();
-            contacts.stream().forEach(contact -> System.out.println(atomicInteger.incrementAndGet() + ". " + contact.toString()));
-            return true;
-        } else {
-            System.out.println("No contacts exists for Address Book - " + addressBook.getName());
-            return false;
+        if(isContactsExist(contacts)){
+            showAllContactsOfAddressBook(addressBook, contacts);
         }
     }
 
+    private void showAllContactsOfAddressBook(AddressBook addressBook, List<Contact> contacts){
+        System.out.println("All Contacts of Address Book - " + addressBook.getName());
+        AtomicInteger atomicInteger = new AtomicInteger();
+        contacts.stream().forEach(contact -> System.out.println(atomicInteger.incrementAndGet() + ". " + contact.toString()));
+    }
+
     private AddressBook selectAddressBook(Scanner scanner){
+
         List<AddressBook> addressBooks = addressBookService.getAllAddressBooks();
 
-        if(showAllAddressBooks(addressBooks)){
-            boolean invalidInput = true;
-            int option;
-            System.out.println("Please select an Address Book from above list");
-            do{
-                option = Integer.parseInt(scanner.nextLine());
-
-                if(option > addressBooks.size()){
-                    System.out.println("Invalid address book select. Please try again.");
-                } else {
-                    invalidInput = false;
-                }
-            } while (invalidInput);
+        if(isAddressBooksExist(addressBooks)){
+            showAllAddressBooks(addressBooks);
+            int option = ConsoleUtil.getValidOptionForCollection(scanner, addressBooks, "Invalid address book select. Please try again.");
 
             return addressBooks.get(option - 1);
         } else {
@@ -215,18 +189,28 @@ public class ConsoleImpl implements Console {
         }
     }
 
-    private boolean showAllAddressBooks(List<AddressBook> addressBooks){
-        if(addressBooks != null && !addressBooks.isEmpty()){
-            AtomicInteger atomicInteger = new AtomicInteger();
-            addressBooks.stream()
-                    .forEach(addressBook ->
-                            System.out.println(atomicInteger.incrementAndGet() + ". " + addressBook.getName())
-                    );
-        } else {
-            System.out.println("No Address Book available. Please create an Address Book to continue");
-            return false;
+    private void showAllAddressBooks(List<AddressBook> addressBooks){
+        AtomicInteger atomicInteger = new AtomicInteger();
+        addressBooks.stream()
+                .forEach(addressBook ->
+                        System.out.println(atomicInteger.incrementAndGet() + ". " + addressBook.getName()));
+    }
+
+    private boolean isAddressBooksExist(List<AddressBook> addressBooks){
+        if(addressBooks != null && !addressBooks.isEmpty()) {
+           return true;
         }
 
-        return true;
+        System.out.println("No Address Book available. Please create an Address Book to continue");
+        return false;
+    }
+
+    private boolean isContactsExist(Collection<Contact> contacts){
+        if(contacts != null && !contacts.isEmpty()) {
+            return true;
+        }
+
+        System.out.println("No contacts exists.");
+        return false;
     }
 }
