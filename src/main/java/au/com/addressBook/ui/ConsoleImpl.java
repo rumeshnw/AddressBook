@@ -8,6 +8,7 @@ import au.com.addressBook.service.AddressBookService;
 import au.com.addressBook.service.ContactService;
 import au.com.addressBook.ui.handler.ExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.*;
@@ -85,7 +86,7 @@ public class ConsoleImpl implements Console {
         System.out.println("-- 3. Delete existing Contact");
         System.out.println("-- 4. Show all Contacts of an Address Book");
         System.out.println("-- 5. Show all unique Contacts of all Address Books");
-        System.out.println("-- 99. Create new Address Book");
+        System.out.println("-- 99. Exit the system");
     }
 
     private AddressBook createAddressBook(Scanner scanner){

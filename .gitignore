@@ -17,3 +17,8 @@ C:\log4j-application.log
 *.lock
 *.log
 .idea/workspace.xml
+*.bin
+*.bin
+*.lock
+*.xml
+*.log

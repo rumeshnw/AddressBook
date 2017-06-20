@@ -1,9 +1,9 @@
 # Address Book
 
-This system user Gradle build system(version 3.1). However, to use this application or run any of the below commands, you do not need Gradle to be installed.
+This system uses Gradle build system(version 3.1). However, to use this application or run any of the below commands, you do not need Gradle to be installed.
 
 **Pre-requisite**:
-- In order to execute use the system Java 8 should be installed.
+- In order to use the system Java 8 should be installed.
 
 **Commands**
 
@@ -27,11 +27,16 @@ This system user Gradle build system(version 3.1). However, to use this applicat
 
 Once you execute the Run System command, system will boot up and show list of options with following operations,
 
-1. Create new Address Book
-2. Add new Contact
-3. Delete existing Contact
-4. Show all Contacts of an Address Book
-5. Show all unique Contacts of all Address Books
-99. Create new Address Book
+(1) Create new Address Book
+
+(2) Add new Contact
+
+(3) Delete existing Contact
+
+(4) Show all Contacts of an Address Book
+
+(5) Show all unique Contacts of all Address Books
+
+(99) Exit the system
 
 Then you can enter respective option number to interact with the system.

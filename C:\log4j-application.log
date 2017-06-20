@@ -2540,3 +2540,275 @@ java.util.NoSuchElementException: No line found
 2017-06-20 01:15:46 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
 2017-06-20 01:15:46 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
 2017-06-20 01:15:54 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 10:06:59 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 10:06:59 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 10:06:59 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 10:06:59 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 10:06:59 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 10:06:59 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 10:07:00 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 10:07:12 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 11:56:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 11:56:02 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 11:56:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 11:56:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 11:56:03 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 11:56:03 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 11:56:03 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 11:56:05 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 12:03:57 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 12:03:57 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 12:03:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 12:03:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 12:03:57 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 12:03:57 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 12:03:57 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 12:04:07 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:26:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:26:18 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:26:18 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:26:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:26:18 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:26:18 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:26:19 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:26:30 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:35:12 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:35:12 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:35:12 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:35:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:35:12 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:35:12 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:35:12 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:35:29 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:38:50 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:38:50 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:38:50 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:38:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:38:50 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:38:50 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:38:50 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:39:05 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:39:24 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: au.com.addressBook.domain.Contact.contactEntries, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:582)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:201)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:561)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.read(AbstractPersistentCollection.java:132)
+	at org.hibernate.collection.internal.PersistentSet.hashCode(PersistentSet.java:430)
+	at org.apache.commons.lang3.builder.HashCodeBuilder.append(HashCodeBuilder.java:851)
+	at au.com.addressBook.domain.Contact.hashCode(Contact.java:122)
+	at java.util.HashMap.hash(HashMap.java:338)
+	at java.util.HashMap.put(HashMap.java:611)
+	at java.util.HashSet.add(HashSet.java:219)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at au.com.addressBook.service.ContactServiceImpl.getAllContacts(ContactServiceImpl.java:63)
+	at au.com.addressBook.ui.ConsoleImpl.showUniqueContacts(ConsoleImpl.java:168)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:58)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:34)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 14:41:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:41:19 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:41:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:41:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:41:19 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:41:19 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:41:19 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:41:22 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1540)
+	at au.com.addressBook.ui.ConsoleImpl.createAddressBook(ConsoleImpl.java:93)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:42)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:34)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 14:41:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:41:31 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:41:31 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:41:31 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:41:31 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:41:31 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:41:31 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:41:44 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:42:10 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: au.com.addressBook.domain.Contact.contactEntries, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:582)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:201)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:561)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.read(AbstractPersistentCollection.java:132)
+	at org.hibernate.collection.internal.PersistentSet.toString(PersistentSet.java:299)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.lang.StringBuilder.append(StringBuilder.java:131)
+	at au.com.addressBook.domain.Contact.toString(Contact.java:113)
+	at java.lang.String.valueOf(String.java:2994)
+	at java.io.PrintStream.println(PrintStream.java:821)
+	at java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1548)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at au.com.addressBook.ui.ConsoleImpl.showUniqueContacts(ConsoleImpl.java:171)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:58)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:34)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 14:43:09 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:43:09 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:43:09 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:43:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:43:09 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:43:09 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:43:10 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:44:04 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:44:21 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: au.com.addressBook.domain.Contact.contactEntries, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:582)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:201)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:561)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.read(AbstractPersistentCollection.java:132)
+	at org.hibernate.collection.internal.PersistentSet.hashCode(PersistentSet.java:430)
+	at org.apache.commons.lang3.builder.HashCodeBuilder.append(HashCodeBuilder.java:851)
+	at au.com.addressBook.domain.Contact.hashCode(Contact.java:122)
+	at java.util.HashMap.hash(HashMap.java:338)
+	at java.util.HashMap.put(HashMap.java:611)
+	at java.util.HashSet.add(HashSet.java:219)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at au.com.addressBook.service.ContactServiceImpl.getAllContacts(ContactServiceImpl.java:63)
+	at au.com.addressBook.ui.ConsoleImpl.showUniqueContacts(ConsoleImpl.java:168)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:58)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:34)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 14:45:36 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:45:36 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:45:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:45:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:45:36 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:45:36 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:45:37 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:45:46 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:46:02 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: au.com.addressBook.domain.Contact.contactEntries, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:582)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:201)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:561)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.read(AbstractPersistentCollection.java:132)
+	at org.hibernate.collection.internal.PersistentSet.hashCode(PersistentSet.java:430)
+	at org.apache.commons.lang3.builder.HashCodeBuilder.append(HashCodeBuilder.java:851)
+	at au.com.addressBook.domain.Contact.hashCode(Contact.java:122)
+	at java.util.HashMap.hash(HashMap.java:338)
+	at java.util.HashMap.put(HashMap.java:611)
+	at java.util.HashSet.add(HashSet.java:219)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at au.com.addressBook.service.ContactServiceImpl.getAllContacts(ContactServiceImpl.java:63)
+	at au.com.addressBook.ui.ConsoleImpl.showUniqueContacts(ConsoleImpl.java:168)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:58)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:34)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 14:49:37 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:49:38 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:49:38 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:49:38 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:49:38 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:49:38 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:49:38 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:49:52 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:50:07 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: au.com.addressBook.domain.Contact.contactEntries, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:582)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:201)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:561)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.read(AbstractPersistentCollection.java:132)
+	at org.hibernate.collection.internal.PersistentSet.hashCode(PersistentSet.java:430)
+	at org.apache.commons.lang3.builder.HashCodeBuilder.append(HashCodeBuilder.java:851)
+	at au.com.addressBook.domain.Contact.hashCode(Contact.java:122)
+	at java.util.HashMap.hash(HashMap.java:338)
+	at java.util.HashMap.put(HashMap.java:611)
+	at java.util.HashSet.add(HashSet.java:219)
+	at au.com.addressBook.service.ContactServiceImpl.lambda$getAllContacts$0(ContactServiceImpl.java:67)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at au.com.addressBook.service.ContactServiceImpl.getAllContacts(ContactServiceImpl.java:65)
+	at au.com.addressBook.ui.ConsoleImpl.showUniqueContacts(ConsoleImpl.java:168)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:58)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:34)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 14:54:11 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:54:11 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:54:11 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:54:11 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:54:11 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:54:11 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:54:12 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:54:13 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:56:36 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 14:56:36 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 14:56:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 14:56:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 14:56:36 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 14:56:36 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 14:56:37 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 14:56:59 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 14:57:12 ERROR ExceptionHandlerImpl:24 - Something went wrong!
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: au.com.addressBook.domain.Contact.contactEntries, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:582)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:201)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:561)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.read(AbstractPersistentCollection.java:132)
+	at org.hibernate.collection.internal.PersistentSet.hashCode(PersistentSet.java:430)
+	at org.apache.commons.lang3.builder.HashCodeBuilder.append(HashCodeBuilder.java:851)
+	at au.com.addressBook.domain.Contact.hashCode(Contact.java:122)
+	at java.util.HashMap.hash(HashMap.java:338)
+	at java.util.HashMap.put(HashMap.java:611)
+	at java.util.HashSet.add(HashSet.java:219)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at au.com.addressBook.service.ContactServiceImpl.getAllContacts(ContactServiceImpl.java:64)
+	at au.com.addressBook.ui.ConsoleImpl.showUniqueContacts(ConsoleImpl.java:170)
+	at au.com.addressBook.ui.ConsoleImpl.lambda$startConsole$0(ConsoleImpl.java:60)
+	at au.com.addressBook.ui.Console.withScanner(Console.java:18)
+	at au.com.addressBook.ui.ConsoleImpl.startConsole(ConsoleImpl.java:36)
+	at au.com.addressBook.Application.main(Application.java:19)
+2017-06-20 15:04:03 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 15:04:04 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 15:04:04 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 15:04:04 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 15:04:04 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 15:04:04 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 15:04:04 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 15:04:06 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-20 15:06:42 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-20 15:06:42 INFO  Version:45 - HHH000412: Hibernate Core {5.2.10.Final}
+2017-06-20 15:06:42 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-06-20 15:06:42 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-20 15:06:42 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2017-06-20 15:06:42 INFO  LobCreatorBuilderImpl:98 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-20 15:06:42 INFO  Version:17 - HV000001: Hibernate Validator 5.2.1.Final
+2017-06-20 15:06:44 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory

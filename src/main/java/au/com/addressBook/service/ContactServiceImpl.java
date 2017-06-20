@@ -36,7 +36,7 @@ public class ContactServiceImpl implements ContactService {
                                                       .setFirstName(contactDTO.getContactFirstName())
                                                       .setLastName(contactDTO.getContactLastName())
                                                       .setContactEntries(contactDTO.getContactEntries()).build();
-        System.out.println("CONTACT :::: " + contact.toString());
+
         return contactRepository.save(contact);
     }
 
