@@ -40,3 +40,5 @@ Once you execute the Run System command, system will boot up and show list of op
 (99) Exit the system
 
 Then you can enter respective option number to interact with the system.
+
+Test coverage report can be found under /AddressBook/build/reports/coverage/index.html
