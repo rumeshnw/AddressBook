@@ -66,6 +66,9 @@ task integrationTest(type: Test) {
     testClassesDir = sourceSets.integrationTest.output.classesDir
     classpath = sourceSets.integrationTest.runtimeClasspath
     outputs.upToDateWhen {false}
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/integrationTest.exec")
+    }
 }
 
 configurations {
@@ -86,9 +89,15 @@ task runJar(type: JavaExec) {
 
 jacocoTestReport {
     group = "Reporting"
+    executionData test, integrationTest
     reports {
         xml.enabled true
         csv.enabled false
         html.destination "${buildDir}/reports/coverage"
+    }
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: 'au/com/addressBook/ui/**')
+        })
     }
 }
