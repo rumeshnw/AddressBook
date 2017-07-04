@@ -1,6 +1,6 @@
 # Address Book
 
-This system uses Gradle build system(version 3.1). However, to use this application or run any of the below commands, you do not need Gradle to be installed.
+This system uses Gradle build system(version 3.1). However, to use this application or run any of the below commands, you do not need to install Gradle.
 
 **Prerequisite**:
 - In order to use the system Java 8 should be installed.
