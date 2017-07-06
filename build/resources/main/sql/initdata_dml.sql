@@ -1,1 +1,0 @@
-insert into AddressBook(addressBookId, name, description) values(1, 'Default', 'Default address Book');
